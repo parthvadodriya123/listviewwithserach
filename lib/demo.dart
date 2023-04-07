@@ -19,24 +19,24 @@ class _DemoState extends State<Demo> {
         child: Column(
           children: [
             Text(controller.a.value.toString()),
-            // Expanded(
-            //   child: SingleChildScrollView(
-            //     child: ListView.builder(
-            //       shrinkWrap: true,
-            //       physics: const NeverScrollableScrollPhysics(),
-            //       itemCount: 100,
-            //       itemBuilder: (BuildContext context,index){
-            //         return Text(index.toString());
-            //       },
-            //     ),
-            //   ),
-            // ),
-            // Row(
-            //   children: [
-            //     Expanded(child: ElevatedButton(onPressed: (){},child: Text("hello"),)),
-            //     Expanded(child: ElevatedButton(onPressed: (){},child: Text("hello"),)),
-            //   ],
-            // )
+            Expanded(
+              child: SingleChildScrollView(
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: 100,
+                  itemBuilder: (BuildContext context,index){
+                    return Text(index.toString());
+                  },
+                ),
+              ),
+            ),
+            Row(
+              children: [
+                Expanded(child: ElevatedButton(onPressed: (){},child: Text("hello"),)),
+                Expanded(child: ElevatedButton(onPressed: (){},child: Text("hello"),)),
+              ],
+            )
           ],
         ),
       ),
